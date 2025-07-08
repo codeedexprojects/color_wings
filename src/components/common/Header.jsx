@@ -80,7 +80,7 @@ const Header = () => {
           <img 
             src={logo} 
             alt="Logo" 
-            className="h-13 w-30"
+            className="h-15 w-30"
           />
         </div>
 

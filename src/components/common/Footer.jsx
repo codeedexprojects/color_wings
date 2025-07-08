@@ -39,22 +39,30 @@ const ContactFooter = () => {
 
                             <div className="space-y-6">
                                 {/* Email */}
-                                <div className="flex items-center space-x-4">
-                                    <Mail className="w-6 h-6 text-white" />
-                                    <span className="text-xl font-medium">info@colorwingads.com</span>
-                                </div>
+                                {/* Email */}
+<div className="flex items-center space-x-4">
+  <Mail className="w-6 h-6 text-white" />
+  <a href="mailto:info@colorwingads.com" className="text-xl font-medium text-white hover:underline">
+    info@colorwingads.com
+  </a>
+</div>
 
-                                {/* Phone */}
-                                <div className="flex items-center space-x-4">
-                                    <Phone className="w-6 h-6 text-white" />
-                                    <span className="text-xl font-medium">+971 56 503 7735</span>
-                                </div>
+{/* Phone */}
+<div className="flex items-center space-x-4">
+  <Phone className="w-6 h-6 text-white" />
+  <a href="tel:+971565037735" className="text-xl font-medium text-white hover:underline">
+    +971 56 503 7735
+  </a>
+</div>
 
-                                {/* Website */}
-                                <div className="flex items-center space-x-4">
-                                    <Globe className="w-6 h-6 text-white" />
-                                    <span className="text-xl font-medium">www.colorwingads.com</span>
-                                </div>
+{/* Website */}
+<div className="flex items-center space-x-4">
+  <Globe className="w-6 h-6 text-white" />
+  <a href="https://www.colorwingads.com" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-white hover:underline">
+    www.colorwingads.com
+  </a>
+</div>
+
 
                                 {/* Address */}
                                 <div className="flex items-start space-x-4 mt-8">

@@ -124,7 +124,9 @@ const ProductBanner = () => {
   const currentBannerData = banners[currentBanner];
 
   return (
-    <section className={`relative ${currentBannerData.bgColor} py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-1000 ease-in-out`}>
+    <section 
+      className={`relative ${currentBannerData.bgColor} py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-1000 ease-in-out xl:min-h-[90vh] xl:flex xl:items-center`}
+    >
       <div 
         ref={vantaRef}
         className="absolute inset-0 z-0 opacity-30 transition-all duration-1000 ease-in-out"
@@ -136,18 +138,18 @@ const ProductBanner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 transition-all duration-1000 ease-in-out">
-            <h2 className={`text-4xl sm:text-5xl font-bold ${currentBannerData.titleColor} leading-tight transition-all duration-1000 ease-in-out`}>
+            <h2 className={`text-4xl sm:text-5xl font-bold ${currentBannerData.titleColor} leading-tight xl:text-6xl`}>
               {currentBannerData.title}
               <br />
               <span className={currentBannerData.subtitleColor}>{currentBannerData.subtitle}</span>
             </h2>
-            <p className={`${currentBannerData.descriptionColor} text-lg leading-relaxed max-w-md transition-all duration-1000 ease-in-out`}>
+            <p className={`${currentBannerData.descriptionColor} text-lg leading-relaxed max-w-md xl:text-xl`}>
               {currentBannerData.description}
             </p>
             <div>
               <button
                 onClick={handleOrderNow}
-                className={`cursor-pointer ${currentBannerData.buttonBg} ${currentBannerData.buttonTextColor} font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl`}
+                className={`cursor-pointer ${currentBannerData.buttonBg} ${currentBannerData.buttonTextColor} font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl xl:text-lg`}
               >
                 {currentBannerData.buttonText}
               </button>
@@ -160,7 +162,7 @@ const ProductBanner = () => {
               <img
                 src={currentBannerData.image}
                 alt={currentBannerData.alt}
-                className="w-full max-w-xl lg:max-w-2xl object-cover rounded-lg transform transition-all duration-700 hover:scale-105"
+                className="w-full max-w-xl lg:max-w-2xl xl:max-w-3xl object-cover rounded-lg transform transition-all duration-700 hover:scale-105"
               />
             </div>
           </div>
@@ -168,7 +170,7 @@ const ProductBanner = () => {
       </div>
       
       {/* Banner Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20 xl:bottom-8">
         {banners.map((_, index) => (
           <button
             key={index}
