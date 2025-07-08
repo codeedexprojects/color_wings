@@ -35,18 +35,15 @@ export default function BusinessCardsSection() {
       offset: 100,
     });
 
-    // Check if device is mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     checkMobile();
     window.addEventListener('resize', checkMobile);
-
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Show only first 3 cards on mobile if showAll is false
   const displayedCards = isMobile && !showAll ? cardData.slice(0, 3) : cardData;
 
   const handleViewMore = () => {
@@ -54,7 +51,7 @@ export default function BusinessCardsSection() {
   };
 
   return (
-    <div className="bg-white py-16 px-4 md:px-20">
+    <div className="bg-white pt-4 pb-16 px-4 md:px-20">
       {/* Heading Section */}
       <div
         className="text-center mb-10 border-red-600 pt-4"
@@ -68,24 +65,28 @@ export default function BusinessCardsSection() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {displayedCards.map((card, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+            className="relative overflow-hidden rounded-lg shadow-md cursor-pointer group"
             data-aos="fade-up"
             data-aos-delay={index * 100}
             data-aos-duration="600"
           >
-            <img
-              src={card.src}
-              alt={`Card ${index + 1}`}
-              className="w-full h-80 object-cover"
-            />
+            <div className="aspect-square w-full relative">
+              <img
+                src={card.src}
+                alt={`Business Card ${index + 1}`}
+                className="absolute top-0 left-0 w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                loading="lazy"
+              />
+            </div>
           </div>
         ))}
       </div>
 
+      {/* View More/Less Button (Mobile Only) */}
       {isMobile && cardData.length > 3 && (
         <div className="text-center mt-8">
           <button
@@ -94,10 +95,21 @@ export default function BusinessCardsSection() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {showAll ? 'View Less' : `View More `}
+            {showAll ? 'View Less' : 'View More'}
           </button>
         </div>
       )}
+
+      {/* Square Aspect Ratio Helper */}
+      <style jsx>{`
+        .aspect-square {
+          position: relative;
+          padding-bottom: 100%;
+        }
+        .aspect-square > img {
+          object-position: center;
+        }
+      `}</style>
     </div>
   );
 }

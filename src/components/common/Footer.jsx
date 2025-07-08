@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Mail, Phone, Globe, MapPin, Instagram, Send } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaWhatsapp } from 'react-icons/fa';
 
 
 const ContactFooter = () => {
@@ -89,34 +90,34 @@ const ContactFooter = () => {
 
             {/* Bottom Footer */}
             <div className="bg-gray-900 py-6 px-4 sm:px-6 lg:px-8">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <span className="text-lg font-medium text-white">colorwing_ads</span>
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-col items-center justify-center space-y-4">
+                        <span className="text-lg font-medium text-white">colorwing_ads</span>
 
-      <div className="flex space-x-6">
-        <a
-          href="https://www.instagram.com/colorwing_ads?igsh=MWIwb2Nva2p5OTRsYg=="
-          className="text-white hover:text-red-400 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Instagram className="w-6 h-6" />
-        </a>
+                        <div className="flex space-x-6">
+                            <a
+                                href="https://www.instagram.com/colorwing_ads?igsh=MWIwb2Nva2p5OTRsYg=="
+                                className="text-white hover:text-red-400 transition-colors"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Instagram className="w-6 h-6" />
+                            </a>
 
-        <a
-          href="https://wa.me/971565037735"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-red-400 transition-colors"
-        >
-          <Phone className="w-6 h-6" />
-        </a>
-      </div>
+                            <a
+                                href="https://wa.me/971565037735"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-red-400 transition-colors"
+                            >
+                                <FaWhatsapp className="w-6 h-6" />
+                            </a>
+                        </div>
 
-      <p className="text-sm text-gray-400">© 2025 Colorwings. All rights reserved.</p>
-    </div>
-  </div>
-</div>
+                        <p className="text-sm text-gray-400">© 2025 Colorwings. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
 
         </footer>
     );

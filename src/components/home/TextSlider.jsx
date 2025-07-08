@@ -2,29 +2,27 @@ import React from 'react';
 
 export default function PrintEssentialsSlider() {
   return (
-    <div className="bg-red-500 text-white py-8 overflow-hidden">
-      <div className="flex whitespace-nowrap animate-scroll-faster">
-        {/* Repeated text for continuous scrolling */}
+    <div className="bg-red-500 text-white py-8 overflow-hidden relative">
+      <div className="scroll-track flex whitespace-nowrap animate-scroll-fast">
+        <div className="flex items-center space-x-4 text-3xl md:text-4xl lg:text-5xl font-bold">
+          {Array(10).fill(null).map((_, index) => (
+            <React.Fragment key={index}>
+              <span>PRINT ESSENTIALS</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
+            </React.Fragment>
+          ))}
+        </div>
+
         <div className="flex items-center space-x-8 text-3xl md:text-4xl lg:text-5xl font-bold">
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
-          <span>PRINT ESSENTIALS</span>
-          <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
+          {Array(10).fill(null).map((_, index) => (
+            <React.Fragment key={`dup-${index}`}>
+              <span>PRINT ESSENTIALS</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl">•</span>
+            </React.Fragment>
+          ))}
         </div>
       </div>
-      
+
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -34,20 +32,9 @@ export default function PrintEssentialsSlider() {
             transform: translateX(-50%);
           }
         }
-        
-        /* Original speed (slower) */
+
         .animate-scroll {
-          animation: scroll 15s linear infinite;
-        }
-        
-        /* Faster version */
-        .animate-scroll-faster {
-          animation: scroll 8s linear infinite;
-        }
-        
-        /* Even faster version */
-        .animate-scroll-fastest {
-          animation: scroll 5s linear infinite;
+          animation: scrollFast 6s linear infinite;
         }
       `}</style>
     </div>
