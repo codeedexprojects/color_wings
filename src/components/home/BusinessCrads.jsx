@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import mockup from '../../assets/bscard.png';
+import image1 from '../../assets/BusinessCards/image1.png';
 import image3 from '../../assets/BusinessCards/image3.png';
 import image2 from '../../assets/BusinessCards/image2.png';
 import image4 from '../../assets/BusinessCards/image4.png';
@@ -16,7 +16,7 @@ export default function BusinessCardsSection() {
   const [isMobile, setIsMobile] = useState(false);
 
   const cardData = [
-    { src: mockup },
+    { src: image1 },
     { src: image2 },
     { src: image3 },
     { src: image4 },
