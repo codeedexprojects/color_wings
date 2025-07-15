@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import image1 from '../../assets/hero2.png';
 import image2 from '../../assets/hero1.png';
 import stationeryBanner from '../../assets/hero.png';
+import whiteThemeGif from '../../assets/bg.gif'
 
 const ProductBanner = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -9,7 +10,6 @@ const ProductBanner = () => {
   const vantaEffect = useRef(null);
 
   const banners = [
-    // First banner - WHITE THEME
     {
       id: 1,
       title: "PROFESSIONAL",
@@ -23,9 +23,10 @@ const ProductBanner = () => {
       buttonBg: "bg-red-600",
       buttonTextColor: "text-white",
       image: stationeryBanner,
-      alt: "Professional stationery showcase"
+      alt: "Professional stationery showcase",
+      backgroundType: "gif" // Add this property
     },
-    // Second banner - RED THEME
+    // Second banner - RED THEME WITH VANTA
     {
       id: 2,
       title: "PRINT MEMORIES",
@@ -39,9 +40,10 @@ const ProductBanner = () => {
       buttonBg: "bg-white",
       buttonTextColor: "text-red-600",
       image: image1,
-      alt: "Custom printed mugs showcase"
+      alt: "Custom printed mugs showcase",
+      backgroundType: "vanta" // Add this property
     },
-    // Third banner - WHITE THEME
+    // Third banner - WHITE THEME WITH GIF BACKGROUND
     {
       id: 3,
       title: "WEAR YOUR BRAND",
@@ -55,13 +57,23 @@ const ProductBanner = () => {
       buttonBg: "bg-red-600",
       buttonTextColor: "text-white",
       image: image2,
-      alt: "Custom printed t-shirts showcase"
+      alt: "Custom printed t-shirts showcase",
+      backgroundType: "gif" // Add this property
     },
   ];
 
   useEffect(() => {
+    // Only initialize Vanta for the second banner
+    if (currentBanner !== 1) {
+      if (vantaEffect.current) {
+        vantaEffect.current.destroy();
+        vantaEffect.current = null;
+      }
+      return;
+    }
+
     const initVanta = () => {
-      if (window.VANTA && vantaRef.current) {
+      if (window.VANTA && vantaRef.current && !vantaEffect.current) {
         vantaEffect.current = window.VANTA.BIRDS({
           el: vantaRef.current,
           mouseControls: true,
@@ -71,7 +83,7 @@ const ProductBanner = () => {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          backgroundColor: currentBanner === 1 ? 0xff6b6b : 0xffffff, // Red for middle banner, white for others
+          backgroundColor: 0xff6b6b, // Red for middle banner
           color1: 0xff6b6b,
           color2: 0x4ecdc4,
           colorMode: 'lerp',
@@ -103,6 +115,7 @@ const ProductBanner = () => {
     return () => {
       if (vantaEffect.current) {
         vantaEffect.current.destroy();
+        vantaEffect.current = null;
       }
     };
   }, [currentBanner]);
@@ -127,11 +140,29 @@ const ProductBanner = () => {
     <section 
       className={`relative ${currentBannerData.bgColor} py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-1000 ease-in-out xl:min-h-[90vh] xl:flex xl:items-center`}
     >
-      <div 
-        ref={vantaRef}
-        className="absolute inset-0 z-0 opacity-30 transition-all duration-1000 ease-in-out"
-        style={{ width: '100%', height: '100%' }}
-      />
+      {/* Background elements */}
+      {currentBannerData.backgroundType === "vanta" && (
+        <div 
+          ref={vantaRef}
+          className="absolute inset-0 z-0 opacity-30 transition-all duration-1000 ease-in-out"
+          style={{ width: '100%', height: '100%' }}
+        />
+      )}
+      
+      {currentBannerData.backgroundType === "gif" && (
+        <div 
+          className="absolute inset-0 z-0  transition-all duration-1000 ease-in-out"
+          style={{ 
+            width: '100%', 
+            height: '100%',
+            backgroundImage: `url(${whiteThemeGif})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'repeat',
+            opacity: 0.3
+          }}
+        />
+      )}
       
       {/* Content Overlay */}
       <div className="relative z-10 max-w-7xl mx-auto">

@@ -40,28 +40,28 @@ const ContactFooter = () => {
                             <div className="space-y-6">
                                 {/* Email */}
                                 {/* Email */}
-<div className="flex items-center space-x-4">
-  <Mail className="w-6 h-6 text-white" />
-  <a href="mailto:info@colorwingads.com" className="text-xl font-medium text-white hover:underline">
-    info@colorwingads.com
-  </a>
-</div>
+                                <div className="flex items-center space-x-4">
+                                    <Mail className="w-6 h-6 text-white" />
+                                    <a href="mailto:info@colorwingads.com" className="text-xl font-medium text-white hover:underline">
+                                        info@colorwingads.com
+                                    </a>
+                                </div>
 
-{/* Phone */}
-<div className="flex items-center space-x-4">
-  <Phone className="w-6 h-6 text-white" />
-  <a href="tel:+971565037735" className="text-xl font-medium text-white hover:underline">
-    +971 56 503 7735
-  </a>
-</div>
+                                {/* Phone */}
+                                <div className="flex items-center space-x-4">
+                                    <Phone className="w-6 h-6 text-white" />
+                                    <a href="tel:+971565037735" className="text-xl font-medium text-white hover:underline">
+                                        +971 56 503 7735
+                                    </a>
+                                </div>
 
-{/* Website */}
-<div className="flex items-center space-x-4">
-  <Globe className="w-6 h-6 text-white" />
-  <a href="https://www.colorwingads.com" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-white hover:underline">
-    www.colorwingads.com
-  </a>
-</div>
+                                {/* Website */}
+                                <div className="flex items-center space-x-4">
+                                    <Globe className="w-6 h-6 text-white" />
+                                    <a href="https://www.colorwingads.com" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-white hover:underline">
+                                        www.colorwingads.com
+                                    </a>
+                                </div>
 
 
                                 {/* Address */}
