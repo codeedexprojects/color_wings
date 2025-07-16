@@ -53,7 +53,7 @@ const CurvedStripGallery = () => {
         </div>
         
         {/* Gallery container with curved ovals */}
-        <div className="w-full h-80 flex flex-col justify-center relative">
+        <div className="w-full h-80 flex flex-col justify-center relative overflow-hidden">
           {/* Top curved oval */}
           <div 
             className="absolute top-0 h-10 w-full bg-red-500 bg-opacity-80"
