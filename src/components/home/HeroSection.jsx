@@ -29,7 +29,7 @@ const CurvedStripGallery = () => {
   };
 
   return (
-    <div 
+    <div
       className="w-full py-10 flex flex-col items-center justify-center relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -39,7 +39,7 @@ const CurvedStripGallery = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-      
+
       {/* Content wrapper with higher z-index */}
       <div className="relative z-10 w-full flex flex-col items-center">
         {/* Top heading */}
@@ -51,18 +51,18 @@ const CurvedStripGallery = () => {
             Leave a lasting impression with our stunning business cards. Explore our collection and find the perfect design that reflects your brand's identity.
           </p>
         </div>
-        
+
         {/* Gallery container with curved ovals */}
         <div className="w-full h-80 flex flex-col justify-center relative overflow-hidden">
           {/* Top curved oval */}
-          <div 
+          <div
             className="absolute top-0 h-10 w-full bg-red-500 bg-opacity-80"
             style={{
               borderBottomLeftRadius: '70%',
               borderBottomRightRadius: '70%'
             }}
           />
-          
+
           {/* Scrollable strip container */}
           <div className="w-full min-w-[1200px] h-75 flex flex-nowrap items-start overflow-x-auto">
             {images.map((imageUrl, index) => (
@@ -75,9 +75,9 @@ const CurvedStripGallery = () => {
               />
             ))}
           </div>
-          
+
           {/* Bottom curved oval */}
-          <div 
+          <div
             className="absolute bottom-0 h-12 w-full bg-red-500 bg-opacity-80"
             style={{
               borderTopLeftRadius: '50%',
@@ -85,9 +85,9 @@ const CurvedStripGallery = () => {
             }}
           />
         </div>
-        
+
         {/* Get Started button */}
-        <button  onClick={handleOrderNow} className="cursor-pointer mt-12 px-8 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition-colors shadow-lg">
+        <button onClick={handleOrderNow} className="cursor-pointer mt-12 px-8 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition-colors shadow-lg">
           Order Now
         </button>
       </div>
