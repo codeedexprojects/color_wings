@@ -1,131 +1,25 @@
-import React, { useEffect, useState, useRef } from 'react';
-import image1 from '../../assets/hero2.png';
-import image2 from '../../assets/hero1.png';
-import stationeryBanner from '../../assets/hero.png';
-import whiteThemeGif from '../../assets/bg.gif'
+import React from 'react';
+import image1 from '../../assets/AdvertisingCards/image2.png'
+import image2 from '../../assets/AdvertisingCards/image4.png'
+import image3 from '../../assets/AdvertisingCards/image6.png'
+import image4 from '../../assets/AdvertisingCards/image8.png'
+import image5 from '../../assets/BusinessCards/image1.png'
+import image6 from '../../assets/BusinessCards/image3.png'
+import image7 from '../../assets/BusinessCards/image5.png'
+import image8 from '../../assets/BusinessCards/image7.png'
+import image9 from '../../assets/BusinessCards/image9.png'
+import image10 from '../../assets/CrystalCards/image2.png'
+import image11 from '../../assets/CrystalCards/image4.png'
+import image12 from '../../assets/CrystalCards/image6.png'
+import backgroundImage from '../../assets/bgcolor.jpg' // Add your background image import
 
-const ProductBanner = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const vantaRef = useRef(null);
-  const vantaEffect = useRef(null);
 
-  const banners = [
-    {
-      id: 1,
-      title: "PROFESSIONAL",
-      subtitle: "STATIONERY",
-      description: "From business cards to letterheads, create a cohesive brand identity with our premium stationery printing services. Quality materials, stunning designs.",
-      buttonText: "Contact Now",
-      bgColor: "bg-white",
-      titleColor: "text-red-600",
-      subtitleColor: "text-red-600",
-      descriptionColor: "text-gray-600",
-      buttonBg: "bg-red-600",
-      buttonTextColor: "text-white",
-      image: stationeryBanner,
-      alt: "Professional stationery showcase",
-      backgroundType: "gif" // Add this property
-    },
-    // Second banner - RED THEME WITH VANTA
-    {
-      id: 2,
-      title: "PRINT MEMORIES",
-      subtitle: "ON EVERY SIP",
-      description: "Whether it's for your brand, your bestie, or a special event - our custom-printed mugs turn simple moments into lasting impressions. Choose your design, and we'll make it unforgettable.",
-      buttonText: "Contact Now",
-      bgColor: "bg-red-600",
-      titleColor: "text-white",
-      subtitleColor: "text-white",
-      descriptionColor: "text-gray-200",
-      buttonBg: "bg-white",
-      buttonTextColor: "text-red-600",
-      image: image1,
-      alt: "Custom printed mugs showcase",
-      backgroundType: "vanta" // Add this property
-    },
-    // Third banner - WHITE THEME WITH GIF BACKGROUND
-    {
-      id: 3,
-      title: "WEAR YOUR BRAND",
-      subtitle: "WITH STYLE",
-      description: "Bring your ideas to life on fabric. From corporate uniforms to event wear, we print high-quality, comfortable t-shirts that reflect your brand personality.",
-      buttonText: "Contact Now",
-      bgColor: "bg-white",
-      titleColor: "text-red-600",
-      subtitleColor: "text-red-600",
-      descriptionColor: "text-gray-600",
-      buttonBg: "bg-red-600",
-      buttonTextColor: "text-white",
-      image: image2,
-      alt: "Custom printed t-shirts showcase",
-      backgroundType: "gif" // Add this property
-    },
+const CurvedStripGallery = () => {
+  const images = [
+    image1, image2, image3, image4,
+    image5, image6, image7, image8,
+    image9, image10, image11, image12
   ];
-
-  useEffect(() => {
-    // Only initialize Vanta for the second banner
-    if (currentBanner !== 1) {
-      if (vantaEffect.current) {
-        vantaEffect.current.destroy();
-        vantaEffect.current = null;
-      }
-      return;
-    }
-
-    const initVanta = () => {
-      if (window.VANTA && vantaRef.current && !vantaEffect.current) {
-        vantaEffect.current = window.VANTA.BIRDS({
-          el: vantaRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          backgroundColor: 0xff6b6b, // Red for middle banner
-          color1: 0xff6b6b,
-          color2: 0x4ecdc4,
-          colorMode: 'lerp',
-          birdSize: 0.8,
-          wingSpan: 15.00,
-          speedLimit: 3.00,
-          separation: 80.00,
-          alignment: 15.00,
-          cohesion: 15.00,
-          quantity: 4.00
-        });
-      }
-    };
-
-    if (!window.VANTA) {
-      const threeScript = document.createElement('script');
-      threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
-      threeScript.onload = () => {
-        const vantaScript = document.createElement('script');
-        vantaScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.birds.min.js';
-        vantaScript.onload = initVanta;
-        document.head.appendChild(vantaScript);
-      };
-      document.head.appendChild(threeScript);
-    } else {
-      initVanta();
-    }
-
-    return () => {
-      if (vantaEffect.current) {
-        vantaEffect.current.destroy();
-        vantaEffect.current = null;
-      }
-    };
-  }, [currentBanner]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleOrderNow = () => {
     const phoneNumber = '971565037735';
@@ -134,90 +28,71 @@ const ProductBanner = () => {
     window.open(whatsappURL, '_blank');
   };
 
-  const currentBannerData = banners[currentBanner];
-
   return (
-    <section 
-      className={`relative ${currentBannerData.bgColor} py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-1000 ease-in-out xl:min-h-[90vh] xl:flex xl:items-center`}
+    <div 
+      className="w-full py-10 flex flex-col items-center justify-center relative"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
     >
-      {/* Background elements */}
-      {currentBannerData.backgroundType === "vanta" && (
-        <div 
-          ref={vantaRef}
-          className="absolute inset-0 z-0 opacity-30 transition-all duration-1000 ease-in-out"
-          style={{ width: '100%', height: '100%' }}
-        />
-      )}
       
-      {currentBannerData.backgroundType === "gif" && (
-        <div 
-          className="absolute inset-0 z-0  transition-all duration-1000 ease-in-out"
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            backgroundImage: `url(${whiteThemeGif})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'repeat',
-            opacity: 0.3
-          }}
-        />
-      )}
-      
-      {/* Content Overlay */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-6 transition-all duration-1000 ease-in-out">
-            <h2 className={`text-4xl sm:text-5xl font-bold ${currentBannerData.titleColor} leading-tight xl:text-6xl`}>
-              {currentBannerData.title}
-              <br />
-              <span className={currentBannerData.subtitleColor}>{currentBannerData.subtitle}</span>
-            </h2>
-            <p className={`${currentBannerData.descriptionColor} text-lg leading-relaxed max-w-md xl:text-xl`}>
-              {currentBannerData.description}
-            </p>
-            <div>
-              <button
-                onClick={handleOrderNow}
-                className={`cursor-pointer ${currentBannerData.buttonBg} ${currentBannerData.buttonTextColor} font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl xl:text-lg`}
-              >
-                {currentBannerData.buttonText}
-              </button>
-            </div>
+      {/* Content wrapper with higher z-index */}
+      <div className="relative z-10 w-full flex flex-col items-center">
+        {/* Top heading */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+            FIRST IMPRESSIONS START HERE
+          </h1>
+          <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-md">
+            Leave a lasting impression with our stunning business cards. Explore our collection and find the perfect design that reflects your brand's identity.
+          </p>
+        </div>
+        
+        {/* Gallery container with curved ovals */}
+        <div className="w-full h-80 flex flex-col justify-center relative">
+          {/* Top curved oval */}
+          <div 
+            className="absolute top-0 h-10 w-full bg-red-500 bg-opacity-80"
+            style={{
+              borderBottomLeftRadius: '70%',
+              borderBottomRightRadius: '70%'
+            }}
+          />
+          
+          {/* Scrollable strip container */}
+          <div className="w-full min-w-[1200px] h-75 flex flex-nowrap items-start overflow-x-auto">
+            {images.map((imageUrl, index) => (
+              <div
+                key={index}
+                className="h-75 w-75 min-w-[300px] mr-2.5 bg-cover shadow-lg"
+                style={{
+                  backgroundImage: `url(${imageUrl})`
+                }}
+              />
+            ))}
           </div>
           
-          {/* Right Product Image */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative transition-all duration-1000 ease-in-out">
-              <img
-                src={currentBannerData.image}
-                alt={currentBannerData.alt}
-                className="w-full max-w-xl lg:max-w-2xl xl:max-w-3xl object-cover rounded-lg transform transition-all duration-700 hover:scale-105"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Banner Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20 xl:bottom-8">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentBanner 
-                ? banners[index].bgColor === 'bg-red-600' 
-                  ? 'bg-white shadow-lg' 
-                  : 'bg-red-600 shadow-lg'
-                : 'bg-gray-400 bg-opacity-50 hover:bg-opacity-75'
-            }`}
+          {/* Bottom curved oval */}
+          <div 
+            className="absolute bottom-0 h-12 w-full bg-red-500 bg-opacity-80"
+            style={{
+              borderTopLeftRadius: '50%',
+              borderTopRightRadius: '50%'
+            }}
           />
-        ))}
+        </div>
+        
+        {/* Get Started button */}
+        <button  onClick={handleOrderNow} className="cursor-pointer mt-12 px-8 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition-colors shadow-lg">
+          Order Now
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ProductBanner;
+export default CurvedStripGallery;
