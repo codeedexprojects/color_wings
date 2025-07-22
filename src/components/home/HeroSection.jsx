@@ -59,11 +59,11 @@ const OfficeFlowerGallery = () => {
     },
     {
       id: 10,
-      src: image9,
+      src: image10,
     },
     {
       id: 11,
-      src: image9,
+      src: image11,
     },
   ]
 
