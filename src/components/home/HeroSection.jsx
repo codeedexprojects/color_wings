@@ -1,5 +1,4 @@
 import React from "react"
-
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import image from '../../assets/bgcolorwing.png'
@@ -27,17 +26,14 @@ const OfficeFlowerGallery = () => {
     {
       id: 2,
       src: image2,
-
     },
     {
       id: 3,
       src: image3,
-
     },
     {
       id: 4,
       src: image4,
-
     },
     {
       id: 5,
@@ -146,7 +142,11 @@ const OfficeFlowerGallery = () => {
           alt="Colorwing Advertising LLC Office"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <button className="absolute bottom-15 left-1/2 transform -translate-x-1/2 bg-white/80 hover:bg-white text-black px-6 py-3 rounded-full shadow-md z-10">
+          Order Now
+        </button>
       </div>
+
 
       <div className="relative bg-red-500 py-5 overflow-hidden"
         style={{ bottom: "100px", top: "00px" }}>
