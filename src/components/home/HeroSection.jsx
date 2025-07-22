@@ -11,6 +11,8 @@ import image6 from '../../assets/Carousels/image6.jpg'
 import image7 from '../../assets/Carousels/image7.jpg'
 import image8 from '../../assets/Carousels/image8.jpg'
 import image9 from '../../assets/Carousels/image9.jpg'
+import image10 from '../../assets/Carousels/image10.jpg'
+import image11 from '../../assets/Carousels/image11.jpg'
 
 
 const OfficeFlowerGallery = () => {
@@ -53,6 +55,14 @@ const OfficeFlowerGallery = () => {
     },
     {
       id: 9,
+      src: image9,
+    },
+    {
+      id: 10,
+      src: image9,
+    },
+    {
+      id: 11,
       src: image9,
     },
   ]
@@ -146,7 +156,7 @@ const OfficeFlowerGallery = () => {
       </div>
 
 
-      <div className="relative bg-red-500 py-5 overflow-hidden"
+      <div className="relative  py-5 overflow-hidden"
         style={{ bottom: "100px", top: "00px" }}>
         <div className="relative w-full max-w-6xl mx-auto px-4">
           {/* 3D Carousel Container */}
@@ -216,8 +226,6 @@ const OfficeFlowerGallery = () => {
 
         </div>
       </div>
-
-
 
       <style jsx>{`
         .preserve-3d {

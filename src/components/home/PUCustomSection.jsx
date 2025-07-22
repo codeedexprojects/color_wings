@@ -3,6 +3,9 @@ import mockup from '../../assets/bscard.png';
 import image1 from '../../assets/PUCustomeCards/image1.png';
 import image2 from '../../assets/PUCustomeCards/image2.png';
 import image3 from '../../assets/PUCustomeCards/image3.png';
+import image4 from '../../assets/PUCustomeCards/image4.jpg';
+import image5 from '../../assets/PUCustomeCards/image5.jpg';
+import image6 from '../../assets/PUCustomeCards/image6.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,6 +14,9 @@ export default function PUCustomeCardsSection() {
         { src: image1 },
         { src: image2 },
         { src: image3 },
+        { src: image4 },
+        { src: image5 },
+        { src: image6 },
     ];
 
     useEffect(() => {

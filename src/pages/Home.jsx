@@ -22,6 +22,8 @@ import PUCustomeCardsSection from '../components/home/PUCustomSection'
 import OurClientsSection from '../components/home/OurClients'
 import ClientSlider from '../components/home/ClientsSlider'
 import Footer from '../components/common/Footer'
+import ExpoSlider9 from '../components/home/TextSlider9'
+import ExpoCardsSection from '../components/home/ExpoSection'
 
 function Home() {
   return (
@@ -46,6 +48,9 @@ function Home() {
       <section id='products'><CrystalCardsSection></CrystalCardsSection></section>
       <section id='products'><PrintEssentialsSlider8></PrintEssentialsSlider8></section>
       <section id='products'><PUCustomeCardsSection></PUCustomeCardsSection></section>
+      <section id='products'><ExpoSlider9></ExpoSlider9></section>
+      <section id='products'><ExpoCardsSection></ExpoCardsSection></section>
+
       <section id='clients'><OurClientsSection></OurClientsSection></section>
       <section id='clients'><ClientSlider></ClientSlider></section>
       <section id='contact'><Footer></Footer></section>
