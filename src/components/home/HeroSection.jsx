@@ -1,7 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import image from '../../assets/bgcolorwing.png'
+import image from '../../assets/bgcolor.jpg'
 import image1 from '../../assets/Carousels/image1.jpg'
 import image2 from '../../assets/Carousels/image2.jpg'
 import image3 from '../../assets/Carousels/image3.jpg'
@@ -142,9 +142,7 @@ const OfficeFlowerGallery = () => {
           alt="Colorwing Advertising LLC Office"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <button className="absolute bottom-15 left-1/2 transform -translate-x-1/2 bg-white/80 hover:bg-white text-black px-6 py-3 rounded-full shadow-md z-10">
-          Order Now
-        </button>
+        
       </div>
 
 
