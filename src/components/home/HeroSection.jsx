@@ -139,7 +139,7 @@ const OfficeFlowerGallery = () => {
 
   return (
     <div className="relative">
-      {/* Hero Section with Office Image */}
+      {/* Hero Section with Offic Image */}
       <div className="relative h-screen w-full flex flex-col">
         <img
           src={image}
