@@ -12,6 +12,7 @@ export default function PrintEssentialsSlider7() {
               <span className="text-lg md:text-xl lg:text-2xl">•</span>
             </React.Fragment>
           ))}
+          <span className="w-2 block"></span>
         </div>
 
         {/* Duplicate set for infinite loop */}

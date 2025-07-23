@@ -11,6 +11,7 @@ export default function PrintEssentialsSlider() {
               <span className="text-lg md:text-xl lg:text-2xl">•</span>
             </React.Fragment>
           ))}
+          <span className="w-2 block"></span>
         </div>
 
         <div className="flex items-center space-x-4 text-xl md:text-2xl lg:text-3xl font-bold">
@@ -20,6 +21,7 @@ export default function PrintEssentialsSlider() {
               <span className="text-lg md:text-xl lg:text-2xl">•</span>
             </React.Fragment>
           ))}
+          <span className="w-2 block"></span>
         </div>
       </div>
 
