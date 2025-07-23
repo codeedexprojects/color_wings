@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PrintEssentialsSlider() {
   return (
-    <div className="bg-red-500 text-white py-6 overflow-hidden relative">
+    <div className="bg-red-500 text-white py-2 overflow-hidden relative">
       <div className="scroll-track flex whitespace-nowrap animate-scroll-fast">
         <div className="flex items-center space-x-4 text-xl md:text-2xl lg:text-3xl font-bold">
           {Array(10).fill(null).map((_, index) => (
@@ -13,7 +13,7 @@ export default function PrintEssentialsSlider() {
           ))}
         </div>
 
-        <div className="flex items-center space-x-8 text-xl md:text-2xl lg:text-3xl font-bold">
+        <div className="flex items-center space-x-4 text-xl md:text-2xl lg:text-3xl font-bold">
           {Array(10).fill(null).map((_, index) => (
             <React.Fragment key={`dup-${index}`}>
               <span>PRINT ESSENTIALS</span>
