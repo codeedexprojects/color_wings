@@ -14,7 +14,7 @@ export default function ExpoSlider9() {
           ))}
         </div>
 
-        {/* Duplicate set for infinite loop */}
+        {/* Duplicate set for infinit loop */}
         <div className="flex items-center space-x-4 text-xl md:text-2xl lg:text-3xl font-bold">
           {Array(10).fill(null).map((_, index) => (
             <React.Fragment key={`dup-${index}`}>
