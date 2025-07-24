@@ -13,6 +13,9 @@ import image8 from '../../assets/Carousels/image8.jpg'
 import image9 from '../../assets/Carousels/image9.jpg'
 import image10 from '../../assets/Carousels/image10.jpg'
 import image11 from '../../assets/Carousels/image11.jpg'
+import image12 from '../../assets/Carousels/image12.jpg'
+import image13 from '../../assets/Carousels/image13.jpg'
+import image14 from '../../assets/Carousels/image14.jpg'
 
 
 const OfficeFlowerGallery = () => {
@@ -23,7 +26,6 @@ const OfficeFlowerGallery = () => {
     {
       id: 1,
       src: image1,
-
     },
     {
       id: 2,
@@ -64,6 +66,18 @@ const OfficeFlowerGallery = () => {
     {
       id: 11,
       src: image11,
+    },
+    {
+      id: 12,
+      src: image12,
+    },
+    {
+      id: 13,
+      src: image13,
+    },
+    {
+      id: 14,
+      src: image14,
     },
   ]
 

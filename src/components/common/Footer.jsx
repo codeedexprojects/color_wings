@@ -68,9 +68,9 @@ const ContactFooter = () => {
                                 <div className="flex items-start space-x-4 mt-8">
                                     <MapPin className="w-6 h-6 text-white mt-1 flex-shrink-0" />
                                     <div className="text-lg">
-                                        <p className="font-medium">Dar Al Nahda Building,</p>
+                                        <p className="font-medium">RKM Building,</p>
                                         <p className="font-medium">First Floor - 101</p>
-                                        <p className="font-medium">Near Qiyadha Metro Station</p>
+                                        <p className="font-medium">Al Qiyadha, Dubai - UAE</p>
                                     </div>
                                 </div>
                             </div>
