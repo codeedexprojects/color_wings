@@ -59,14 +59,14 @@ const OfficeFlowerGallery = () => {
       id: 9,
       src: image9,
     },
-    {
-      id: 10,
-      src: image10,
-    },
-    {
-      id: 11,
-      src: image11,
-    },
+    // {
+    //   id: 10,
+    //   src: image10,
+    // },
+    // {
+    //   id: 11,
+    //   src: image11,
+    // },
     {
       id: 12,
       src: image12,
