@@ -37,7 +37,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div>
+        <div className="border-t-1 border-red-600"> {/* Added border here */}
             <div className="max-w-6xl mx-auto p-8">
                 <h2 className="text-3xl font-bold text-center text-red-600 mb-2">Get In Touch</h2>
                 <p className="text-center text-gray-600 mb-8">
