@@ -37,7 +37,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="border-t-1 border-red-600"> {/* Added border here */}
+        <div className="border-t-2 border-gray-600">
             <div className="max-w-6xl mx-auto p-8">
                 <h2 className="text-3xl font-bold text-center text-red-600 mb-2">Get In Touch</h2>
                 <p className="text-center text-gray-600 mb-8">
@@ -49,14 +49,26 @@ const ContactUs = () => {
                     <div className="group bg-gray-100 p-6 rounded-lg text-center transition transform hover:-translate-y-1 hover:shadow-xl hover:bg-red-600 relative overflow-hidden">
                         <Phone className="absolute top-4 right-4 w-16 h-16 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
                         <h3 className="text-lg font-semibold mb-2 group-hover:text-white relative z-10">Contact</h3>
-                        <p className="text-red-600 font-bold group-hover:text-white relative z-10">+971 50 937 4377</p>
+                        <a 
+                            href="https://wa.me/971509374377" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-red-600 font-bold group-hover:text-white relative z-10 hover:underline"
+                        >
+                            +971 50 937 4377
+                        </a>
                     </div>
     
                     {/* Email */}
                     <div className="group bg-gray-100 p-6 rounded-lg text-center transition transform hover:-translate-y-1 hover:shadow-xl hover:bg-red-600 relative overflow-hidden">
                         <Mail className="absolute top-4 right-4 w-16 h-16 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
                         <h3 className="text-lg font-semibold mb-2 group-hover:text-white relative z-10">Email</h3>
-                        <p className="text-red-600 font-bold group-hover:text-white relative z-10">info@colorwingads.com</p>
+                        <a 
+                            href="mailto:info@colorwingads.com" 
+                            className="text-red-600 font-bold group-hover:text-white relative z-10 hover:underline"
+                        >
+                            info@colorwingads.com
+                        </a>
                     </div>
     
                     {/* Location */}

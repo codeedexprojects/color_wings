@@ -38,7 +38,7 @@ export default function PUCustomeCardsSection() {
             >
                 <h2 className="text-xl md:text-2xl font-semibold text-red-600 tracking-wide leading-snug">
                     MENU HOLDER | CERTIFICATE HOLDER<br />
-                    TISSUE BOX
+                    TISSUE BOX | TEA COASTER
                 </h2>
             </div>
 
