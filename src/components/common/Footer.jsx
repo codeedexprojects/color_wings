@@ -47,7 +47,7 @@ const ContactUs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                     {/* Contact */}
                     <div className="group bg-gray-100 p-6 rounded-lg text-center transition transform hover:-translate-y-1 hover:shadow-xl hover:bg-red-600 relative overflow-hidden">
-                        <Phone className="absolute top-4 right-4 w-16 h-16 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
+                        <Phone className="absolute top-4 right-1 w-30 h-30 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
                         <h3 className="text-lg font-semibold mb-2 group-hover:text-white relative z-10">Contact</h3>
                         <a 
                             href="https://wa.me/971509374377" 
@@ -61,7 +61,7 @@ const ContactUs = () => {
     
                     {/* Email */}
                     <div className="group bg-gray-100 p-6 rounded-lg text-center transition transform hover:-translate-y-1 hover:shadow-xl hover:bg-red-600 relative overflow-hidden">
-                        <Mail className="absolute top-4 right-4 w-16 h-16 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
+                        <Mail className="absolute top-4 right-1 w-30 h-30 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
                         <h3 className="text-lg font-semibold mb-2 group-hover:text-white relative z-10">Email</h3>
                         <a 
                             href="mailto:info@colorwingads.com" 
@@ -73,7 +73,7 @@ const ContactUs = () => {
     
                     {/* Location */}
                     <div className="group bg-gray-100 p-6 rounded-lg text-center transition transform hover:-translate-y-1 hover:shadow-xl hover:bg-red-600 relative overflow-hidden">
-                        <MapPin className="absolute top-4 right-4 w-16 h-16 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
+                        <MapPin className="absolute top-4 right-1 w-30 h-30 text-gray-300 group-hover:text-red-300 opacity-30 transform rotate-12" />
                         <h3 className="text-lg font-semibold mb-2 group-hover:text-white relative z-10">Location</h3>
                         <p className="text-red-600 font-bold group-hover:text-white relative z-10">
                             RKM Building, First Floor - 101 <br />
@@ -166,7 +166,7 @@ const ContactUs = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Instagram className="w-6 h-6" />
+                                <Instagram className="w-10 h-10" />
                             </a>
                             <a
                                 href="https://wa.me/971509374377"
@@ -174,7 +174,7 @@ const ContactUs = () => {
                                 rel="noopener noreferrer"
                                 className="text-black hover:text-red-400 transition-colors"
                             >
-                                <FaWhatsapp className="w-6 h-6" />
+                                <FaWhatsapp className="w-10 h-10" />
                             </a>
                         </div>
                         <p className="text-sm text-gray-400">© 2025 Colorwings. All rights reserved.</p>
