@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import mockup from '../../assets/bscard.png';
 import image1 from '../../assets/PUCustomeCards/image1.png';
 import image2 from '../../assets/PUCustomeCards/image2.png';
-import image3 from '../../assets/PUCustomeCards/image3.png';
+import image3 from '../../assets/PUCustomeCards/image3.jpg';
 import image4 from '../../assets/PUCustomeCards/image4.jpg';
 import image5 from '../../assets/PUCustomeCards/image5.jpg';
 import image6 from '../../assets/PUCustomeCards/image6.jpg';
@@ -37,8 +37,8 @@ export default function PUCustomeCardsSection() {
                 data-aos-duration="1000"
             >
                 <h2 className="text-xl md:text-2xl font-semibold text-red-600 tracking-wide leading-snug">
-                    PU LEATHER MENU HOLDER | CERTIFICATE HOLDER<br />
-                    PU LEATHER TISSUE BOX
+                    MENU HOLDER | CERTIFICATE HOLDER<br />
+                    TISSUE BOX
                 </h2>
             </div>
 

@@ -53,7 +53,7 @@ export default function CrystalCardsSection() {
                 data-aos-duration="1000"
             >
                 <h2 className="text-xl md:text-2xl font-semibold text-red-600 tracking-wide leading-snug">
-                    CRYSTAL AWARDS | MEMENTOS
+                  CUSTOMISED CRYSTAL AWARDS | MEMENTOS
                 </h2>
             </div>
 

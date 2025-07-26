@@ -79,8 +79,8 @@ export default function VisualCardsSection() {
                     data-aos="fade-up"
                     data-aos-duration="1000">
                     <h2 className="text-xl md:text-2xl font-semibold text-red-600 tracking-wide leading-snug">
-                        HANGING SIGNAGE | LIGHTBOX SIGNAGE | NEON LIGHT SIGN | ACRYLIC SIGN <br />
-                        OFFICE ROOM NAMEPLATE | DIRECTIONAL SIGN | 3D WALL SIGNAGE | BACKLIT LETTERS
+                        OUTDOOR SIGNAGE | LIGHTBOX | NEON LIGHT | ACRYLIC <br />
+                        OFFICE ROOM NAMEPLATE | DIRECTIONAL | 3D WALL 
                     </h2>
                 </div>
                 
